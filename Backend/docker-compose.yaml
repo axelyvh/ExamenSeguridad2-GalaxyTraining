@@ -1,0 +1,31 @@
+services:
+    postgres:
+        image: postgres:16
+        container_name: postgres_identityserver
+        restart: always
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres123
+          POSTGRES_DB: identitydb
+        ports:
+          - "5432:5432"
+        volumes:
+          - D:\INFORMACION\Docker\postgresql_identity:/var/lib/postgresql/data
+        networks:
+            - galaxy_security
+
+    keycloak:
+        image: quay.io/keycloak/keycloak:25.0
+        container_name: keycloak
+        environment:
+            - KEYCLOAK_ADMIN=admin
+            - KEYCLOAK_ADMIN_PASSWORD=admin
+        command:
+            - start-dev
+        ports:
+            - "8080:8080"
+        networks:
+            - galaxy_security
+
+networks:
+  galaxy_security: 
