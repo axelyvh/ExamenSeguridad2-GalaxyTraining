@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "2ae9aa0f-f436-4068-b702-5db9db7b869a",
+		"name": "Galaxy 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29985313"
+	},
+	"item": [
+		{
+			"name": "Cliente1",
+			"item": [
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7287/api/home"
+					},
+					"response": []
+				},
+				{
+					"name": "Authorize",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc3MDg2MkQzQkQ0RjcyNkRFNjFCNzM1RjZDMDNGRkI4IiwidHlwIjoiYXQrand0In0.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDc0IiwibmJmIjoxNzY0NzA4Nzk4LCJpYXQiOjE3NjQ3MDg3OTgsImV4cCI6MTc2NDcxMjM5OCwic2NvcGUiOlsiYXBpLTAxIiwiZW1haWwiLCJvcGVuaWQiLCJwcm9maWxlIiwicm9sZXMiXSwiYW1yIjpbInB3ZCJdLCJjbGllbnRfaWQiOiJjbGllbnQtMDEiLCJzdWIiOiJlMDljMjhhZi1mNGIxLTQyZGYtYTQxYi0zZGMzNzI2M2I5MjMiLCJhdXRoX3RpbWUiOjE3NjQ3MDg3OTgsImlkcCI6ImxvY2FsIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiQWRtaW4iLCJqdGkiOiJBQzQ0OTZFNDk2Q0EwNDA2RDZENjc3QjhFMURGM0JDMyJ9.dkJDdvnCof2W6eQWK8vdThdpIZgR0z_x-5x7feKN8teA2rM_0951cW9YOq5DkfeNv0fbJRrdqaBtowGfTRkF5VDJPxzi5hLMMBwhOx2xyY_ibAm1YQb3byRRtmnwX62vKQWmd2fnoJf6JtQvPl1yOwQUmFoRrb_iskAKdFT9q_RUx8CM1YaeLEhywEXdfZJ44oDe3VoRuvbL0xpjYKEgQ53-6aCOxU6TA_U0NH3t7v9xfjXj_59jFov22d486J28CaUwSYjlbh60a_XqiHzSPDSaqCy9siP8bu9TmHQdP0kYbEKcO6TjRjyQz3k2jho1cOni6NzP8tXNNSYzmc2new"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://localhost:7287/api/config/seguro"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IdentityServer",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "client-01",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "secret",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "avasquezh",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "AVez2024*",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "api-01 openid profile email roles",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://localhost:7074/connect/token"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
